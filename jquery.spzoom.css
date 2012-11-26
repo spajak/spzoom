@@ -1,0 +1,33 @@
+.spzoom-zoom {
+    z-index: 1000;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.spzoom-tracker {
+    background-color: #fff;
+    border-color: #ccc;
+}
+.spzoom-title {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    color: #fff;
+    background-color: #222;
+    padding: 3px 5px;
+    line-height: 14px;
+}
+.spzoom-loader {
+    width: 22px;
+    height: 22px;
+    background: url('spzoom-loader.gif') 50% 50% no-repeat scroll #fff;
+    border: 1px solid #ccc;
+}
+.spzoom-loader-error {
+    width: 80px;
+    height: auto;
+    padding: 2px 4px;
+    color: #000;
+    background-image: none;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
