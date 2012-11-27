@@ -4,6 +4,9 @@ body {
     color: #444;
     background-color: #fff;
 }
+img {
+    border: 0 none;
+}
 h1 {
     margin: 40px 0 25px;
     font-size: 4.2em;

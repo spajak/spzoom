@@ -36,7 +36,7 @@
 
         var thumb = $("img", el).first();
 
-
+        // spzoom containers
         var image;
 
         var zoom;
@@ -47,11 +47,13 @@
 
         var loader;
 
+        // This flag is true if mouse is over the thumb
         var over = false;
 
-        const PENDING = 0;
-        const LOADING = 1;
-        const LOADED  = 2;
+        // Big image loading state
+        var PENDING = 0;
+        var LOADING = 1;
+        var LOADED  = 2;
 
         var state = PENDING;
 
@@ -64,7 +66,7 @@
         var h = settings.height;
 
 
-		var init = function() {
+        var init = function() {
             // Thumb required style
             thumb.css('vertical-align','top');
 
@@ -77,7 +79,7 @@
 		    });
 
             // Create image element
-            image = $('<img style="display:block;position:relative;left:0;top:0;z-index:99" alt="spzoom image"/>');
+            image = $('<img style="display:block;border:0 none;position:relative;left:0;top:0;z-index:99" alt="spzoom image"/>');
 
             // Construct main layers
             zoom    = $('<div class="spzoom-zoom"></div>');
@@ -106,7 +108,7 @@
                 'display': 'block',
                 'border-width': '1px',
                 'border-style': 'solid',
-                'opacity': 0.5,
+                'opacity': 0.5
             });
 
             // Setup loader
@@ -153,7 +155,7 @@
 
             loader.show().offset({
                 'left': x0,
-                'top':  y0,
+                'top':  y0
             }).css('visibility', 'visible');
         }
 
