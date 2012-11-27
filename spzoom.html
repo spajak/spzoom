@@ -1,106 +1,115 @@
 <!doctype html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="spzoom. Simple jQuery plugin for zooming images"/>
+    <title>spzoom - simple image zoom</title>
+    <link rel="stylesheet" type="text/css" href="jquery.spzoom.css"/>
+    <link rel="stylesheet" type="text/css" href="spzoom.css"/>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.spzoom.js"></script>
-    <link rel="stylesheet" type="text/css" href="jquery.spzoom.css">
     <script type="text/javascript">
         $(function() {
             $(".spzoom").spzoom();
         });
     </script>
 </head>
-<body lang="en" style="font-family:Verdana,Helvetica,Arial,sans-serif;color:#444;font-size:12px;">
+<body lang="en">
+    <div id="page">
+        <h1>spzoom</h1>
 
+        <h3>Simple image zoomer for jQuery</h3>
 
-<div style="width:700px; margin:20px auto 100px; line-height:17px;">
-    <h1 style="margin: 40px 0 25px; font-size: 46px;">spzoom</h1>
-    <p style="text-transform:uppercase;margin-bottom:30px;">Simple image zoomer for jQuery</p>
+        <h2>Demo</h2>
 
-    <h2>Demo</h2>
-    <div style="font-size:11px;margin: 40px 0 25px;">
-    <a href="demoimages/46_0923.jpg" class="spzoom" title="medal sygnowany S.D. (Sebastian Dadler) wybity w 1636 roku">
-        <img src="demoimages/46_0923_thumb.jpg" alt="thumb"/>
-    </a>
-    <p style="text-align:justify;font-style:italic;margin-top:25px;">Władysław IV Waza, medal sygnowany S.D. (Sebastian Dadler) wybity w 1636 r. dla upamiętnienia uwolnienia Smoleńska z oblężenia Moskali, zawarcia pokoju z Turcją w 1636 r. oraz podpisania rozejmu ze Szwecją w Sztumskiej Wsi w 1635 r....</p>
+        <div id="demo">
+            <a href="demoimages/46_0923.jpg" class="spzoom" title="medal sygnowany S.D. (Sebastian Dadler) wybity w 1636 roku">
+                <img src="demoimages/46_0923_thumb.jpg" alt="thumb"/>
+            </a>
+            <p style="text-align:justify;font-style:italic;margin-top:25px;">Władysław IV Waza, medal sygnowany S.D. (Sebastian Dadler) wybity w 1636 r. dla upamiętnienia uwolnienia Smoleńska z oblężenia Moskali, zawarcia pokoju z Turcją w 1636 r. oraz podpisania rozejmu ze Szwecją w Sztumskiej Wsi w 1635 r... *</p>
+        </div>
+
+        <h2>Usage</h2>
+
+        <div style="font-size: 10px; margin: 15px 0; font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #009900;">&lt;<a style="color: #000060;" href="http://december.com/html/4/element/script.html"><span style="color: #000000; font-weight: bold;">script</span></a> <span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;text/javascript&quot;</span> <span style="color: #000066;">src</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;jquery.spzoom.js&quot;</span>&gt;&lt;<span style="color: #66cc66;">/</span><a style="color: #000060;" href="http://december.com/html/4/element/script.html"><span style="color: #000000; font-weight: bold;">script</span></a>&gt;</span></div></li>
+        <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #009900;">&lt;<a style="color: #000060;" href="http://december.com/html/4/element/link.html"><span style="color: #000000; font-weight: bold;">link</span></a> <span style="color: #000066;">rel</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;stylesheet&quot;</span> <span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;text/css&quot;</span> <span style="color: #000066;">href</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;jquery.spzoom.css&quot;</span>&gt;</span></div></li>
+        </ol></div>
+
+        <div style="font-size: 10px; font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #009900;">&lt;<a style="color: #000060;" href="http://december.com/html/4/element/a.html"><span style="color: #000000; font-weight: bold;">a</span></a> <span style="color: #000066;">href</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;46_0923.jpg&quot;</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;spzoom&quot;</span> <span style="color: #000066;">title</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;medal sygnowany S.D. (Sebastian Dadler) wybity w 1636 roku&quot;</span>&gt;</span></div></li>
+        <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; &nbsp; <span style="color: #009900;">&lt;<a style="color: #000060;" href="http://december.com/html/4/element/img.html"><span style="color: #000000; font-weight: bold;">img</span></a> <span style="color: #000066;">src</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;46_0923_thumb.jpg&quot;</span> <span style="color: #000066;">alt</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;thumb&quot;</span><span style="color: #66cc66;">/</span>&gt;</span></div></li>
+        <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a style="color: #000060;" href="http://december.com/html/4/element/a.html"><span style="color: #000000; font-weight: bold;">a</span></a>&gt;</span></div></li>
+        </ol></div>
+
+        <div style="font-size: 10px; margin: 15px 0 25px; font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">$<span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li>
+        <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; &nbsp; $<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;.spzoom&quot;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">spzoom</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li>
+        <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li>
+        </ol></div>
+
+        <h2>Options</h2>
+
+        <table>
+        <thead>
+            <tr>
+                <th>option</th>
+                <th style="width:120px;">default</th>
+                <th>description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>width</td>
+                <td>250</td>
+                <td>Zoom window width</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>250</td>
+                <td>Zoom window height</td>
+            </tr>
+            <tr>
+                <td>position</td>
+                <td>'right'</td>
+                <td>Position of the zoom window relative to the thumb. Can be one of top/right/bottom/left</td>
+            </tr>
+            <tr>
+                <td>margin</td>
+                <td>20</td>
+                <td>Additional space between thumb and zoom window</td>
+            </tr>
+            <tr>
+                <td>cursor</td>
+                <td>'crosshair'</td>
+                <td>Cursor style. null to leave alone</td>
+            </tr>
+            <tr>
+                <td style="">title</td>
+                <td>'bottom'</td>
+                <td>Image title position (title is read from anchor title attr.). Set to null to not display title. Can be top/bottom</td>
+            </tr>
+            <tr>
+                <td>error</td>
+                <td>'Loading error!'</td>
+                <td>Message to display in case of image loading error. Can be null - means do not show error.</td>
+            </tr>
+            <tr>
+                <td>min_tracker</td>
+                <td>15</td>
+                <td>Min. dimension tracker window can have. Smaller tracker won't be drawn (only cursor)</td>
+            </tr>
+        </tbody>
+        </table>
+
+        <h2>Source & License</h2>
+
+        <p>
+        Latest version is 0.1.0.<br/>
+        Source code can always be found on <a href="https://github.com/spajak/spzoom">https://github.com/spajak/spzoom</a>. Source is under the BSD 2-Clause License.
+        </p>
+
+        <p style="font-size:10px;">
+        * Polish medal. Photo and description comes form <a href="http://wcn.pl">http://wcn.pl</a>.
+        </p>
     </div>
-
-    <h2>Usage</h2>
-
-<div style="font-size: 10px; margin: 15px 0; font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #009900;">&lt;<a style="color: #000060;" href="http://december.com/html/4/element/script.html"><span style="color: #000000; font-weight: bold;">script</span></a> <span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;text/javascript&quot;</span> <span style="color: #000066;">src</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;jquery.spzoom.js&quot;</span>&gt;&lt;<span style="color: #66cc66;">/</span><a style="color: #000060;" href="http://december.com/html/4/element/script.html"><span style="color: #000000; font-weight: bold;">script</span></a>&gt;</span></div></li>
-<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #009900;">&lt;<a style="color: #000060;" href="http://december.com/html/4/element/link.html"><span style="color: #000000; font-weight: bold;">link</span></a> <span style="color: #000066;">rel</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;stylesheet&quot;</span> <span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;text/css&quot;</span> <span style="color: #000066;">href</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;jquery.spzoom.css&quot;</span>&gt;</span></div></li>
-</ol></div>
-
-<div style="font-size: 10px; font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #009900;">&lt;<a style="color: #000060;" href="http://december.com/html/4/element/a.html"><span style="color: #000000; font-weight: bold;">a</span></a> <span style="color: #000066;">href</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;46_0923.jpg&quot;</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;spzoom&quot;</span> <span style="color: #000066;">title</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;medal sygnowany S.D. (Sebastian Dadler) wybity w 1636 roku&quot;</span>&gt;</span></div></li>
-<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; &nbsp; <span style="color: #009900;">&lt;<a style="color: #000060;" href="http://december.com/html/4/element/img.html"><span style="color: #000000; font-weight: bold;">img</span></a> <span style="color: #000066;">src</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;46_0923_thumb.jpg&quot;</span> <span style="color: #000066;">alt</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;thumb&quot;</span><span style="color: #66cc66;">/</span>&gt;</span></div></li>
-<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a style="color: #000060;" href="http://december.com/html/4/element/a.html"><span style="color: #000000; font-weight: bold;">a</span></a>&gt;</span></div></li>
-</ol></div>
-
-<div style="font-size: 10px; margin: 15px 0 25px; font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">$<span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li>
-<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; &nbsp; $<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;.spzoom&quot;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">spzoom</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li>
-<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li>
-</ol></div>
-
-    <h2>Options</h2>
-<table style="border-collapse:collapse;margin-bottom: 25px;">
-<thead>
-    <tr>
-        <th style="text-align:left; padding: 5px; border: 1px solid #d0d0d0;">option</th>
-        <th style="text-align:left; padding: 5px; border: 1px solid #d0d0d0;width:120px;">default</th>
-        <th style="text-align:left; padding: 5px; border: 1px solid #d0d0d0;">description</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">width</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">250</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">Zoom window width</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">height</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">250</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">Zoom window height</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">position</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">'right'</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">Position of the zoom window relative to the thumb. Can be one of top/right/bottom/left</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">margin</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">20</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">Additional space between thumb and zoom window</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">cursor</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">'crosshair'</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">Cursor style. null to leave alone</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">title</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">'bottom'</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">Image title position (title is read from anchor title attr.). Set to null to not display title. Can be top/bottom</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">error</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">'Loading error!'</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">Message to display in case of image loading error. Can be null - means do not show error.</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">min_tracker</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">15</td>
-        <td style="border: 1px solid #d0d0d0; padding: 5px;">Min. dimension tracker window can have. Smaller tracker won't be drawn (only cursor)</td>
-    </tr>
-</tbody>
-</table>
-
-    <h2>Source & License</h2>
-    <p>
-    Latest version is 0.1.0.<br/>
-    Source code can always be downloaded from <a href="https://github.com/spajak/spzoom">https://github.com/spajak/spzoom</a>. Source is under the BSD 2-Clause License.
-    </p>
-</div>
 
 </body>
 </html>
