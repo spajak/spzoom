@@ -1,11 +1,18 @@
 .spzoom-zoom {
-    z-index: 1000;
-    border: 1px solid #ccc;
+    z-index: 97;
+    border: 1px solid rgba(0,0,0,0.2);
     background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 250px;
+    height: 250px;
 }
 .spzoom-tracker {
+    border-width: 1px;
+    border-style: solid;
+    opacity: 0.5;
     background-color: #fff;
     border-color: #ccc;
+    z-index: 97;
 }
 .spzoom-title {
     font-family: Verdana, Helvetica, Arial, sans-serif;
@@ -16,9 +23,9 @@
     line-height: 14px;
 }
 .spzoom-loader {
-    width: 22px;
-    height: 22px;
-    background: url('spzoom-loader.gif') 50% 50% no-repeat scroll #fff;
+    width: 24px;
+    height: 24px;
+    background: url('/assets/spzoom/spzoom-loader.gif') 50% 50% no-repeat scroll #fff;
     border: 1px solid #ccc;
 }
 .spzoom-loader-error {
