@@ -1,3 +1,7 @@
+[data-spzoom] img {
+    vertical-align: top;
+}
+
 .spzoom-zoom {
     z-index: 97;
     border: 1px solid rgba(0,0,0,0.2);
@@ -9,7 +13,6 @@
 .spzoom-tracker {
     border-width: 1px;
     border-style: solid;
-    opacity: 0.5;
     background-color: #fff;
     border-color: #ccc;
     z-index: 97;
@@ -25,16 +28,7 @@
 .spzoom-loader {
     width: 24px;
     height: 24px;
-    background: url('/assets/spzoom/spzoom-loader.gif') 50% 50% no-repeat scroll #fff;
+    background: url('spzoom-loader.gif') 50% 50% no-repeat scroll #fff;
     border: 1px solid #ccc;
 }
-.spzoom-loader-error {
-    width: 80px;
-    height: auto;
-    padding: 2px 4px;
-    color: #000;
-    background-image: none;
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    text-align: center;
-}
+

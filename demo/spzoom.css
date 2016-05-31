@@ -4,12 +4,19 @@ body {
     color: #444;
     background-color: #fff;
 }
+pre code {
+    font-family: Consolas,​ Monaco, ​monospace;
+}
 img {
     border: 0 none;
 }
 h1 {
     margin: 40px 0 25px;
-    font-size: 4.2em;
+    font-size: 4.25em;
+}
+h1 > a {
+    text-decoration: none;
+    color: inherit;
 }
 h2 {
     margin: 35px 0 25px;
@@ -40,5 +47,9 @@ th {
 }
 #demo {
     font-size: 11px;
-    margin: 40px 0 25px;
+    max-width: 300px;
+    margin: 40px auto;
+}
+.hljs {
+    padding: 1em;
 }
