@@ -2,8 +2,8 @@
  * Simple jQuery image zoomer plugin
  *
  * Author: Sebatian Pająk <spconv@gmail.com>
- * Version: 0.2.0 (26/04/2016)
- * Licensed under the MIT license
+ * Version: 0.3.0 (1/06/2016)
+ * Licensed under the BSD 2-Clause License
  */
 
 ;(function($, undefined) {
@@ -164,13 +164,12 @@
             }
         }
 
-        this.$element.append(this.$tracker);
-        this.$element.append(this.$zoom);
-
-
         this.$element.click($.proxy(this.onClick, this));
 
-        this.$element.append(this.$loader);
+        this.$element
+            .append(this.$tracker)
+            .append(this.$zoom)
+            .append(this.$loader);
 
         var x = this.$thumbImage.offset().left + (this.$thumbImage.width() - this.$loader.outerWidth())/2;
         var y = this.$thumbImage.offset().top + (this.$thumbImage.height() - this.$loader.outerHeight())/2;
@@ -196,9 +195,9 @@
 
         $img.attr('src', this.$element.attr('href'));
 
-        // Load event may not fire if the image goes from browser cache
+        // Load event *may* not fire if the image goes from browser cache
         if ($img.prop('complete') && $img.prop('naturalWidth') !== undefined) {
-            setTimeout(function() { deferred.resolve('cached'); });
+            setTimeout(function() { deferred.resolve(); });
         }
 
         return deferred.promise();
@@ -312,7 +311,6 @@
         this.$tracker.css({'visibility': 'hidden', 'width': 0, 'height': 0});
     };
 
-
     Spzoom.prototype.onEnter = function(event) {
         this.x = event.pageX;
         this.y = event.pageY;
@@ -338,7 +336,6 @@
     };
 
     Spzoom.prototype.onLoad = function(src) {
-        console.log(src);
         this.state = this.LOADED;
         this.$loader.hide();
         this.render();
