@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="spzoom. Simple jQuery plugin for zooming images"/>
+    <title>spzoom test</title>
+    <link rel="stylesheet" type="text/css" href="../jquery.spzoom.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery.spzoom.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('[data-spzoom]').spzoom();
+        });
+    </script>
+</head>
+<body lang="en">
+    <div id="page">
+        <h1>spzoom</h1>
+
+        <h3>Simple image zoomer for jQuery</h3>
+
+        <div id="demo">
+            <a href="img/46_0923.jpg" title="medal sygnowany S.D. (Sebastian Dadler) wybity w 1636 roku" data-spzoom data-spzoom-width="200" data-spzoom-height="200">
+                <img src="img/46_0923_thumb.jpg" alt="Image"/>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
