@@ -19,7 +19,6 @@
         });
     };
 
-
     $.fn.spzoom.defaults = {
         width: 250,             // Zoom window width in pixels
         height: 250,            // Zoom window height in pixels
@@ -28,7 +27,6 @@
         showTitle: true,        // Whether to display image title
         titlePosition: 'bottom' // top, bottom
     };
-
 
     /**
      * Zoom plugin constructor
@@ -60,7 +58,7 @@
         this.x = 0;
         this.y = 0;
 
-        // This flag is true zoom should not be displayed
+        // If this flag is true zoom should not be displayed
         this.hidden = false;
 
         // jQuery DOM elements & events
@@ -192,15 +190,15 @@
         var $img = this.$image;
 
         $img.on({
-            load: deferred.resolve,
-            error: deferred.reject
+            load: function() { deferred.resolve(); },
+            error: function() { deferred.reject(); }
         });
 
         $img.attr('src', this.$element.attr('href'));
 
         // Load event may not fire if the image goes from browser cache
         if ($img.prop('complete') && $img.prop('naturalWidth') !== undefined) {
-            setTimeout(deferred.resolve);
+            setTimeout(function() { deferred.resolve('cached'); });
         }
 
         return deferred.promise();
@@ -339,7 +337,8 @@
         };
     };
 
-    Spzoom.prototype.onLoad = function() {
+    Spzoom.prototype.onLoad = function(src) {
+        console.log(src);
         this.state = this.LOADED;
         this.$loader.hide();
         this.render();
