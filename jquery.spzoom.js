@@ -33,7 +33,7 @@
      */
     function Spzoom($element, options)
     {
-        var defaultOptions = $.fn.spzoom.defaults;
+        var defaultOptions = $.extend({}, $.fn.spzoom.defaults);
 
         for (var optionName in defaultOptions) {
             var dataName = 'spzoom' + optionName.charAt(0).toUpperCase() + optionName.slice(1);
